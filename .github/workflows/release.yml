@@ -25,7 +25,7 @@ jobs:
         run: uv pip install --system build twine
       
       - name: Build package
-        run: python -m build
+        run: rm -rf dist && python -m build
         
       - name: Publish to PyPI
         env:
