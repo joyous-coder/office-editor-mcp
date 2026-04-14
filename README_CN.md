@@ -116,10 +116,9 @@ pip install -r requirements.txt
 ```json
 {
   "mcpServers": {
-    "office-assistant": {
-      "command": "python",
-      "args": ["/path/to/office_server.py"],
-      "env": {}
+    "office-editor": {
+      "command": "uvx",
+      "args": ["joyous-office-editor-mcp"]
     }
   }
 }
@@ -136,11 +135,9 @@ pip install -r requirements.txt
 ```json
 {
   "mcpServers": {
-    "office-document-server": {
-      "command": "python",
-      "args": [
-        "/path/to/office_server.py"
-      ]
+    "office-editor": {
+      "command": "uvx",
+      "args": ["joyous-office-editor-mcp"]
     }
   }
 }
