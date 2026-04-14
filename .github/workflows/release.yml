@@ -22,8 +22,8 @@ jobs:
           enable-cache: true
           
       - name: Install dependencies
-        run: uv sync --no-editable
-        
+        run: uv pip install build twine
+      
       - name: Build package
         run: python -m build
         
