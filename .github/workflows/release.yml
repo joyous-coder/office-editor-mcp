@@ -22,7 +22,7 @@ jobs:
           enable-cache: true
           
       - name: Install dependencies
-        run: uv pip install --no-lock -e ".[dev]"
+        run: uv sync --no-editable
         
       - name: Build package
         run: python -m build
