@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "office-editor-mcp"
+version = "1.0.0"
+description = "MCP server for Office document processing (Word, Excel, PowerPoint)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = ["mcp", "office", "word", "excel", "powerpoint", "document-processing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "mcp>=0.1.4",
+    "openpyxl>=3.0.0",
+    "python-docx>=0.8.11",
+    "python-pptx>=0.6.21",
+    "pandas>=1.3.0",
+    "numpy>=1.21.0",
+    "Pillow>=9.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.0.0",
+    "twine>=4.0.0",
+]
+
+[project.scripts]
+office-editor-mcp = "office_editor_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/office_editor_mcp"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/",
+]

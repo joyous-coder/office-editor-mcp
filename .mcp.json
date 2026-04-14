@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "office-editor": {
+      "command": "python",
+      "args": ["D:\\Links\\Tools\\office-editor-mcp\\excel_server.py"],
+      "env": {
+        "OFFICE_EDIT_PATH": "D:\\Desktop"
+      }
+    }
+  }
+}
